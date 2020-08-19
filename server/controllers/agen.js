@@ -26,7 +26,7 @@ class agenController {
       if (!find_agen_level) throw newError(404,'Level agen not found.');
       const new_agen = {
         no_lisensi,
-        nama_agen,
+        nama_agen: nama_agen.toUpperCase(),
         id_agen_level: find_agen_level.id,
         status,
         status_tgl: dateToString(new Date()),
