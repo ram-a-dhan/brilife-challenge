@@ -2,7 +2,6 @@
 const {
   Model
 } = require('sequelize');
-const agen = require('./agen');
 module.exports = (sequelize, DataTypes) => {
   class agen_level extends Model {
     /**
@@ -12,7 +11,7 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      agen_level.hasMany(agen, {
+      agen_level.hasMany(models.agen, {
         foreignKey: 'id_agen_level'
       });
     }

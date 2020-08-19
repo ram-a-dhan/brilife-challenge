@@ -5,7 +5,7 @@ function errorHandler(err, req, res, next) {
 		errObj.message = 'ID agen / no. lisensi already exists.';
 	} else if (err.name === 'SequelizeValidationError') {
 		errObj.status = 400;
-		errObj.message = err.errors.join(', ') + '.';
+		errObj.message = err.errors[0].type;
 	} else if (err.name === 'BadRequestError' && err.message) {
 		errObj.status = 400;
 		errObj.message = err.message;

@@ -2,7 +2,6 @@
 const {
   Model
 } = require('sequelize');
-const agen = require('./agen');
 module.exports = (sequelize, DataTypes) => {
   class agen_struktur extends Model {
     /**
@@ -12,7 +11,9 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      agen_struktur.belongsTo(agen);
+      agen_struktur.belongsTo(models.agen, {
+        foreignKey: 'id_agen'
+      });
     }
   };
   agen_struktur.init({
