@@ -1,2 +1,2 @@
-# brilife_muhammadramadhan_codeid_modul4_programmerfrontend
+# brilife-challenge
 brilife_muhammadramadhan_codeid_modul4_programmerfrontend
